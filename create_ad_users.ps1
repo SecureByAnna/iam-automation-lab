@@ -24,7 +24,8 @@ foreach ($user in $users) {
 
         # Check if user already exists
         if (Get-ADUser -Filter {SamAccountName -eq $samAccountName}) {
-            "$displayName already exists. Skipped." | Out-File -Append $logFile
+            "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] $displayName already exists, skipped." | Out-File -Append $logFile
+
             continue
         }
 
@@ -41,7 +42,7 @@ foreach ($user in $users) {
             -Path $ouPath `
             -Enabled $true
 
-        "$displayName created successfully." | Out-File -Append $logFile
+            "[$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')] $displayName created successfully." | Out-File -Append $logFile
     }
     catch {
         "Failed to create $($user.FirstName) $($user.LastName): $_" | Out-File -Append $logFile
