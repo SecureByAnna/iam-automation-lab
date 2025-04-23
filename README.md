@@ -23,8 +23,8 @@ I practice automating real-world scenarios for Active Directory, Azure AD, PingO
 ## Current scripts available:
 | Script Name | Description | Status |
 |-------------|-------------|--------|
-| create_ad_users.ps1 | Bulk-create users from CSV | In progress |
-| disable_inactive_users.ps1 | Auto-disable inactive users | Planned |
+| create_ad_users.ps1 | Bulk-create users from CSV | Complete |
+| disable_inactive_users.ps1 | Auto-disable inactive users | Complete |
 | audit_group_membership.ps1 | Generate group audit report | Planned |
 
 Feel free to reach out or connect on [LinkedIn](https://www.linkedin.com/in/anna-gustova-04122a219/)!
